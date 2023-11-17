@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navigation Bar</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutus">About us</a></li>
+            <li><a href="#contactus">Contact us</a></li>
+
+        </ul>
+    </nav>
+    <fieldset>
+        <h1>Get Started</h1>
+        <div id="textToType"></div>
+    </fieldset>
+    <button id="joinTheClubButton" type="submit" onclick="joinTheClub()">Join the Club</button>
+
+    <script>
+        // JavaScript function to handle the button click
+        function joinTheClub() {
+            // Redirect to the second page
+            window.location.href = "index.html";
+
+            const text = "Nothing tastes as good as healthy feels..."; // Your desired text
+            const delay = 100; // Delay between each character being "typed" (in milliseconds)
+            const textElement = document.getElementById('textToType');
+
+            function typeWriter(text, i) {
+                if (i < text.length) {
+                    textElement.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(() => {
+                        typeWriter(text, i);
+                    }, delay);
+                }
+                            }
+
+                                    typeWriter(text, 0);
+
+                                }
+                            </script>
+    </body>
+    
+    </html>
