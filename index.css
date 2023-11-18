@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("https://indiacsr.in/wp-content/uploads/2023/01/physical-fitness-wellness-and-lifestyle.png");
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#title {
+    color: black;
+    font-family: cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size:xx-large;
+    font-weight: 700;
+    box-shadow: 10px 10px 20px black;
+}
+
+#description {
+    color: black;
+    box-shadow: 10px 10px 20px black;
+}
+
+#registration-form, h1, p {
+    max-width: 410px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #CBC3E3;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 10px 10px 20px black;
+}
+
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+    text-align: left;
+
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+fieldset{
+    border: 10px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    color:black;
+    font-weight: bold;
+}
+
+.inline {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#signup, #login {
+    background-color:purple;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#signup:hover, #login:hover {
+    background-color:purple;
+}
+
+.gender{
+    display: flex;
+    flex-direction: column;
+}
+.radio-group label {
+    flex-direction: column;
+    display: inline-flex;
+        align-items: center;
+            margin-bottom: 10px;
+                margin-top: 0px;
+            padding-right: 64px;
+
+}
