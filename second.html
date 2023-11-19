@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev. project</title>
+    <link rel="stylesheet" href="second.css">
+</head>
+
+<body>
+    <fieldset>
+        <br>
+        <label for="datemax">Date of birth</label>
+        <input type="date" id="datemax" name="datemax" min="1943-12-31" max="2005-12-31" required><br>
+        <label id="number-label">Height(cm): <br><input placeholder="Enter your height" id="height" type="number" min="100"
+                max="300" required /></label><br>
+        <label id="number-label">What is your current weight(kg): <br><input placeholder="Enter your weight" id="weight"
+                type="number" min="30" max="200" required /></label><br>
+        <label id="number-label">What is your target weight(kg): <br><input placeholder="Enter your weight" id="targetWeight"
+                type="number" min="30" max="200" required/></label><br>
+
+        <label>My goal is to: <br>
+            <input class="inline" id="gain" name="day" type="checkbox" required value="gain" /> Gain weight
+            <br>
+
+            <input class="inline" id="muscle" name="value" value="muscle" type="checkbox" required /> Muscle building/Strength
+            training
+            <br>
+
+            <input class="inline" id="loss" type="checkbox" name="day" value="loss" required /> Weight loss
+            <br>
+
+            <input class="inline" id="stress" name="day" value="stress" type="checkbox" required /> Stress reduction
+            <br>
+
+            <input class="inline" id="appearance" name="day" value="appearance" type="checkbox" required /> Appearance and
+            Aesthetics:
+            <br>
+            <input class="inline" id="others" name="day" value="others" type="checkbox" required /> Others
+            <br>
+
+        </label>
+
+        <label><br>Comments<br><textarea id="comments" rows="5" cols="20" placeholder="I want to achieve..."></textarea></label>
+        <br>
+        <br><input id="next" type="submit" value="Next" />
+    </fieldset>
+
+    <script>
+        const nextButton = document.getElementById('next');
+
+        nextButton.addEventListener('click', function (event) {
+            if (!validateForm()) {
+                event.preventDefault(); 
+            } else {
+                window.location.href = 'quest1.html';
+            }
+        });
+
+        function validateForm() {
+            const datemax = document.getElementById('datemax').value;
+            const height = document.getElementById('height').value;
+            const weight = document.getElementById('weight').value;
+            const targetWeight = document.getElementById('targetWeight').value;
+            const comments = document.getElementById('comments').value;
+
+            if (!datemax || !height || !weight || !targetWeight) {
+                alert('Please fill out all the required fields.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
