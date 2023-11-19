@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev. project</title>
+    <link rel="stylesheet" href="quest.css">
+</head>
+
+<body class="quest4">
+    <div class="quest4">
+        <label>What kind of allergies do you have? </label><br>
+        <input class="inline" id="allergy1" name="food" type="checkbox" required value="none" /> None
+        <br>
+
+        <input class="inline" id="allergy2" name="food" value="lactose" type="checkbox" required /> Lactose
+        <br>
+
+        <input class="inline" id="allergy3" type="checkbox" name="food" value="gluten" required /> Gluten
+        <br>
+
+        <input class="inline" id="allergy4" name="food" value="peanuts" type="checkbox" required /> Peanuts
+        <br>
+
+        <input class="inline" id="allergy5" name="food" value="soy" type="checkbox" required /> Soy
+        <br>
+        
+        <input class="inline" id="allergy6" name="food" value="wheat" type="checkbox" required /> Wheat
+        <br>
+    </div>
+
+    <br><input id="next" type="submit" value="Next" />
+    <script>
+        const nextButton = document.getElementById('next');
+
+        nextButton.addEventListener('click', function () {
+            window.location.href = 'quest5.html';
+        });
+    </script>
+</body>
+
+</html>

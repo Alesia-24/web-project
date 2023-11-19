@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev. project</title>
+    <link rel="stylesheet" href="quest.css">
+</head>
+
+<body class="quest5">
+    <div class="quest5">
+        <label><span class="label-text3">How much time do you typically have for meal preparation per day?</span></label><br>
+        <input class="inline" id="time1" name="food" type="radio" required value="up-to-30-minutes" /> Up to 30 minutes
+        <br>
+
+        <input class="inline" id="time2" name="food" value="up-to-1-hour" type="radio" required /> Up to 1 hour
+        <br>
+
+        <input class="inline" id="time3" type="radio" name="food" value="more-than-1-hour" required /> More than 1 hour
+        <br>
+    </div>
+
+    <br><input id="next" type="submit" value="Next" />
+    <script>
+        const nextButton = document.getElementById('next');
+
+        nextButton.addEventListener('click', function () {
+            window.location.href = 'quest6.html';
+        });
+    </script>
+</body>
+
+</html>

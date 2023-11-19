@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev. project</title>
+    <link rel="stylesheet" href="quest.css">
+</head>
+
+<body class="quest1">
+    <div class="quest1">
+        <label><span class="label-text1">Whatâ€™s your relationship with meat? </span><br>
+            <input class="inline" id="meat1" name="account-type" type="radio" required value="meat" /> I love meat-I eat it all the time
+            <br>
+
+            <input class="inline" id="meat2" name="account-type" value="meat" type="radio" required /> I eat meat occasionally
+            <br>
+
+            <input class="inline" id="meat3" type="radio" name="account-type" value="meat" required /> I eat meat rarely
+            <br>
+
+            <input class="inline" id="meat4" name="account-type" value="meat" type="radio" required /> I never eat meat
+            <br>
+        </label>
+
+        <br><input id="next" type="submit" value="Next" />
+    </div>
+
+    <script>
+        const nextButton = document.getElementById('next');
+
+        nextButton.addEventListener('click', function () {
+            // Redirect to the fourth page
+            window.location.href = 'quest2.html';
+        });
+    </script>
+</body>
+
+</html>

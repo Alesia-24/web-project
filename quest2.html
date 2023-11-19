@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev. project</title>
+    <link rel="stylesheet" href="quest.css">
+</head>
+
+<body class="quest2">
+    <div class="quest2">
+        <label><span class="label-text2">Whatâ€™s your relationship with fish? </span></label><br>
+        <input class="inline" id="fish1" name="food" type="radio" required value="fish" /> I love fish-I eat it all the
+        time
+        <br>
+
+        <input class="inline" id="fish2" name="food" value="fish" type="radio" required /> I eat fish occasionally
+        <br>
+
+        <input class="inline" id="fish3" type="radio" name="food" value="fish" required /> I eat fish rarely
+        <br>
+
+        <input class="inline" id="fish4" name="food" value="fish" type="radio" required /> I never eat fish
+        <br>
+    </div>
+
+    <br><input id="next" type="submit" value="Next" />
+    <script>
+        const nextButton = document.getElementById('next');
+
+        nextButton.addEventListener('click', function () {
+            // Redirect to the fourth page
+            window.location.href = 'quest3.html';
+        });
+    </script>
+</body>
+
+</html>

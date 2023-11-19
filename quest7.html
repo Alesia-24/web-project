@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev. project</title>
+    <link rel="stylesheet" href="quest.css">
+</head>
+
+<body class="quest7">
+    <div class="quest7">
+        <label>How often could you exercise? </label><br>
+        <input class="inline" id="exercise1" name="times" type="radio" required value="2-times-a-week" /> 2 times a week
+        <br>
+
+        <input class="inline" id="exercise2" name="times" value="3-times-a-week" type="radio" required /> 3 times a week
+        <br>
+
+        <input class="inline" id="exercise3" type="radio" name="times" value="4-times-a-week" required /> 4 times a week
+        <br>
+    </div>
+
+    <br><input id="next" type="submit" value="Next" />
+    <script>
+        const nextButton = document.getElementById('next');
+
+        nextButton.addEventListener('click', function () {
+            window.location.href = 'quest8.html';
+        });
+    </script>
+</body>
+
+</html>

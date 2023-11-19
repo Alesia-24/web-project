@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev. project</title>
+    <link rel="stylesheet" href="quest.css">
+</head>
+
+<body class="quest9">
+    <div class="quest9">
+        <label><span class="label-text3">Any other things we need to know? </span></label><br>
+        <input class="inline" id="other1" name="food" type="checkbox" required value="none" /> None
+        <br>
+
+        <input class="inline" id="other2" name="food" value="eating-disorder" type="checkbox" /> I have a history of eating disorder
+        <br>
+
+        <input class="inline" id="other3" type="checkbox" name="food" value="pregnant" /> I am pregnant
+        <br>
+
+        <input class="inline" id="other4" name="food" type="checkbox" value="breastfeeding" /> I am breastfeeding
+        <br>
+
+        <input class="inline" id="other5" name="food" value="diabetes" type="checkbox" /> I have diabetes
+        <br>
+
+        <input class="inline" id="other6" type="checkbox" name="food" value="heart-disease" /> I have a heart disease
+
+    </div>
+    
+    <br><input id="next" type="submit" value="Next" />
+
+    <script>
+        const nextButton = document.getElementById('next');
+        nextButton.addEventListener('click', function () {
+            window.location.href = 'lastpage.html';
+        });
+        const noneCheckbox = document.getElementById('other1');
+        const otherCheckboxes = document.querySelectorAll('[name="food"]:not(#other1)');
+
+        noneCheckbox.addEventListener('change', function () {
+            if (noneCheckbox.checked) {
+                otherCheckboxes.forEach(checkbox => {
+                    checkbox.disabled = true;
+                    checkbox.checked = false;
+                });
+            } else {
+                otherCheckboxes.forEach(checkbox => {
+                    checkbox.disabled = false;
+                });
+            }
+        });
+        
+    </script>
+</body>
+
+</html>

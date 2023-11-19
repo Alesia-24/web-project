@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev. project</title>
+    <link rel="stylesheet" href="quest.css">
+</head>
+
+<body class="quest8">
+    <div class="quest8">
+        <label><span class="label-text3">How physically active are you currently? </span></label><br>
+        <input class="inline" id="active1" name="times" type="radio" required value="not-active" /> Not active (no workouts)
+        <br>
+
+        <input class="inline" id="active2" name="times" value="rarely-active" type="radio" required /> Rarely active (1-2 workouts/week)
+        <br>
+
+        <input class="inline" id="active3" type="radio" name="times" value="active" required /> Active
+        <br>
+    </div>
+
+    <br><input id="next" type="submit" value="Next" />
+    <script>
+        const nextButton = document.getElementById('next');
+
+        nextButton.addEventListener('click', function () {
+            window.location.href = 'quest9.html';
+        });
+    </script>
+</body>
+
+</html>
